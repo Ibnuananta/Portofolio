@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Vision - Photography Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0A0A0A;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-right: 1rem;
+            position: relative;
+        }
+
+        .logo::before, .logo::after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .logo::before {
+            width: 20px;
+            height: 2px;
+        }
+
+        .logo::after {
+            width: 2px;
+            height: 20px;
+        }
+
+        .title-group h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .title-group p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #1A1A1A;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .image-info {
+            padding: 1rem;
+        }
+
+        .image-info h3 {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+        }
+
+        .image-info p {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .decorative-lines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .decorative-lines::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background: #222;
+            left: 30px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-lines"></div>
+    
+    <header class="header">
+        <div class="logo"></div>
+        <div class="title-group">
+            <h1>STREET VISION</h1>
+            <p>Photography Portfolio</p>
+        </div>
+    </header>
+
+    <main class="grid">
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="Urban Solitude">
+            <div class="image-info">
+                <h3>Urban Solitude</h3>
+                <p>Tokyo, Japan</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="City Lights">
+            <div class="image-info">
+                <h3>City Lights</h3>
+                <p>Hong Kong</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="Morning Rush">
+            <div class="image-info">
+                <h3>Morning Rush</h3>
+                <p>Jakarta</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="Street Life">
+            <div class="image-info">
+                <h3>Street Life</h3>
+                <p>Bangkok</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="Night Market">
+            <div class="image-info">
+                <h3>Night Market</h3>
+                <p>Singapore</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <img src="/api/placeholder/400/250" alt="Rain Poetry">
+            <div class="image-info">
+                <h3>Rain Poetry</h3>
+                <p>Seoul</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Street Vision</p>
+        <p>Capturing Urban Stories</p>
+    </footer>
+</body>
+</html>
